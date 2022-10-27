@@ -30,10 +30,10 @@ export class TaskList {
             let color = "color:green;";
             if (status === "todo") color = "";
             return contentTodo +=
-                `<li onclick="changeStatus('${task.id}')" class="task">${task.name}
+                `<li class="task">${task.name}
                 <div class="buttons">
                     <i onclick="delTask('${task.id}')" class="fa fa-trash-o remove" aria-hidden="true"></i>
-                    <i style="${color}" class="fa fa-check-circle-o complete" aria-hidden="true"></i>
+                    <i onclick="changeStatus('${task.id}')" style="${color}" class="fa fa-check-circle-o complete" aria-hidden="true"></i>
                 </div>
             </li>`
         }, '')
